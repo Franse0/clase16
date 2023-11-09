@@ -1,0 +1,166 @@
+:root {
+    --backgroundcolor-violeta: #363062;
+    --backgroundcolor-blanco: #F5F5F5;
+    --backgroundcolor-naranja: #F99417;
+    --backgroundcolor-violetaclaro: #4D4C7D;
+}
+.banner{
+    display:flex;
+    animation: 15s infinite linear slider;
+    background-color: var(--backgroundcolor-naranja);
+}
+
+.contenedor-banner{
+    display:flex;
+    white-space: nowrap;
+}
+.banner p{
+    margin-left:1rem;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+@keyframes slider {
+    from{
+        transform:translate(0%);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+body{
+    background-color: #1d1d1d;
+    color:white;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--backgroundcolor-violetaclaro);
+}
+.logo{
+    width:80px;
+}
+.nav-links{
+    display:flex;
+}
+#nav{
+    display:none;
+}
+img{
+    width:100%;
+}
+
+.titulos{
+    color:#F99417;
+    font-family: 'Nosifer Caps', sans-serif;
+    text-align: center;
+    padding:1rem;
+}
+.inicio-info{
+   /* display:flex;
+    flex-direction: column;*/
+    padding:1rem;
+    background-color: #4D4C7D;
+    gap:1rem;
+}
+
+.btn-halloween{
+    display:block;
+    margin: 1rem auto;
+    /*align-self: center;*/
+    padding:1rem;
+    background-color: var(--backgroundcolor-naranja);
+    border-radius: 1rem;
+}
+
+.crear-formulario-contenedor{
+    display:block;
+    width:80%;
+    text-align: center;
+    margin: 0 auto;
+}
+.form-input.nombre{
+    margin-bottom: 1rem;
+}
+.formulario .form-input{
+    margin-top:1rem;
+}
+.card-resultado{
+    position:relative;
+}
+.contenido-card{
+    position:absolute;
+    top:20rem;
+    left:0;
+    right:0;
+    font-weight: bold;
+    bottom:0;
+    text-align: center;
+}
+.contenido-card h3, .contenido-card p, .info-card-contaianer h4, .info-card-contaianer h5, .info-card-contaianer h6{
+    margin-top:1rem;
+}
+
+@media (min-width:1280px) {
+    header{
+        padding:1rem;
+    }
+    #nav{
+        display:inline;
+    }
+    .nav-item{
+        color:#F5F5F5;
+    }
+    .nav-links{
+        gap:1rem;
+    }
+    .bars-menu{
+        display:none;
+    }
+    .main-principal{
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+    }
+    .main-principal h1{
+        grid-column: 1/3;
+    }
+    img{
+        width:100%;
+    }
+    .inicio{
+        grid-column: 1/3;
+    }
+    .crear-invitacion{
+        grid-column: 1/3;
+    }
+    .inicio{
+        display:flex;
+    }
+    .inicio{
+        background-color: var(--backgroundcolor-violetaclaro);
+    }
+    .inicio-container{
+        display:flex;
+        align-items: center;
+        padding:2rem;
+    }
+    .crear-formulario-contenedor{
+        width:100%;
+        text-align: left;
+        margin: 0;
+        padding:2rem;
+    }
+    .crear-contenedor{
+        display:flex;
+    }
+    .btn-halloween.form{
+        margin:1rem 0;
+    }
+}
